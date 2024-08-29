@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .button_css{
+        @apply bg-slate-800 text-white mx-6 p-3 py-1 rounded-md hover:bg-slate-950 cursor-pointer hover:translate-x-1;
+    }
+}
