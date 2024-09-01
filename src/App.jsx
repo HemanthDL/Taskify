@@ -78,12 +78,12 @@ const handleshowAll = (e)=>{
   return (
     <>
       <Navbar/>
-      <div className="container mx-auto p-5 rounded-xl my-5 min-h-[80vh]  bg-slate-600 text-white w-1/2">
+      <div className="container mx-auto p-5 rounded-xl my-5 min-h-[80vh]  bg-slate-600 text-white sm:w-1/2 w-3/4">
         <h1 className="flex justify-center items-center font-bold text-4xl">Taskify - Manage Your Daily Task</h1>
         <div className="addtodo py-5">
           <h1 className="text-center text-2xl font-bold my-2">Add a Task</h1>
-          <input onChange={handlechange} value={todo} type="text" placeholder="Enter a task" className="w-3/4 rounded-md text-black px-2 p-1"/>
-          <button onClick={handleAdd} className="button_css w-36">
+          <input onChange={handlechange} value={todo} type="text" placeholder="Enter a task" className="2xl:w-3/4 rounded-md text-black px-2 p-1 w-full"/>
+          <button onClick={handleAdd} className="button_css 2xl:w-32 2xl:h-9 my-4 w-full 2xl:mx-4 mx-0">
             Add
             </button>
         </div>
@@ -94,7 +94,7 @@ const handleshowAll = (e)=>{
         {todos.length == 0 && <p className="mx-5">No Task to Display</p>}
         {todos.map((item)=>{
           return (showfinished || !item.iscompleted) && <div key={item.id} className="todos">
-          <div className="todo flex justify-between w-1/2 my-4">
+          <div className="todo flex justify-between sm:w-3/4 my-4 w-full">
             <div className="flex gap-2 items-center">
               <input onChange={handleCheckboChange} type="checkbox" name={item.id} value={item.iscompleted} checked={item.iscompleted} />
               <p className={item.iscompleted?"line-through text-black":""}>{item.todo}</p>
